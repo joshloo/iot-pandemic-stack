@@ -44,3 +44,13 @@ python3 temp-sensor.py
 
 Example output  
 temp-sensor\example-snapshot.png  
+
+# Step guide for LCD display module  
+This demo uses I2C to communicate with 4x20 LCD display module  
+It communicates with Raspberry Pi through i2c0  
+I2C0 is actually disabled by default in Rasp Pi  
+You will need to go change /boot/config.txt and add "dtparam=i2c_vc=on"  
+sudo reboot, then i2c0 will appear in /dev/    
+Reference: https://learn.sparkfun.com/tutorials/raspberry-pi-spi-and-i2c-tutorial/all  
+
+python3 lcd_i2c.py  
