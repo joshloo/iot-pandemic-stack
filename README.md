@@ -25,7 +25,7 @@ Executing the script
 python3 qr-scanner\qr-scanner.py  
 
 Example output  
-qr-scanner\example-snapshot.png  
+![Example output](https://github.com/joshloo/iot-pandemic-stack/blob/main/qr-scanner/example-snapshot.png)  
 
 # Step guide for Temperature Sensor  
 This demo uses MLX 90614 temperature sensing module  
@@ -42,8 +42,7 @@ you should be able to see connected i2c appearing
 cd temp-sensor  
 python3 temp-sensor.py  
 
-Example output  
-temp-sensor\example-snapshot.png  
+![Example output](https://github.com/joshloo/iot-pandemic-stack/blob/main/temp-sensor/example-snapshot.png)  
 
 # Step guide for LCD display module  
 This demo uses I2C to communicate with 4x20 LCD display module  
@@ -54,3 +53,5 @@ sudo reboot, then i2c0 will appear in /dev/
 Reference: https://learn.sparkfun.com/tutorials/raspberry-pi-spi-and-i2c-tutorial/all  
 
 python3 lcd_i2c.py  
+
+![Example output](https://github.com/joshloo/iot-pandemic-stack/blob/main/i2c-lcd-display/example-snapshot.png)  
