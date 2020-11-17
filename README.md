@@ -7,7 +7,7 @@ This repo consists of code for
 
 The environment executing this scripts are Raspberry Pi 400.  
 
-# Step pre-requisite for QR Scanner  
+# Step guide for QR Scanner  
 Generating QR Scanner:  
 pip3 install qrcode[pil]  
 import qrcode  
@@ -26,3 +26,21 @@ python3 qr-scanner\qr-scanner.py
 
 Example output  
 qr-scanner\example-snapshot.png  
+
+# Step guide for Temperature Sensor  
+This demo uses MLX 90614 temperature sensing module  
+It communicates with Raspberry Pi through i2c1  
+
+Setting up i2c in Raspberry pi  
+run "sudo raspi-config"  
+go to "Interfacing options"  
+go to "P5 I2C" or equivalent  
+select "yes" for enable  
+select "finish"  
+run "ls /dev/*i2c*"  
+you should be able to see connected i2c appearing  
+cd temp-sensor  
+python3 temp-sensor.py  
+
+Example output  
+temp-sensor\example-snapshot.png  
