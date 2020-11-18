@@ -3,6 +3,7 @@
 This repo consists of code for  
 - QR Scanner  
 - Temperature Sensing  
+- LCD display module    
 - Upload to cloud  
 
 The environment executing this scripts are Raspberry Pi 400.  
