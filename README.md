@@ -70,4 +70,4 @@ python3 post_example.py
 
 On web browser, run http://127.0.0.1:5000/api/users
 
-![Example output](https://github.com/joshloo/iot-pandemic-stack/blob/main/web-database/example-snapshot.png)  
+![Example output](https://github.com/joshloo/iot-pandemic-stack/blob/main/web-database/example_snapshot.png)
