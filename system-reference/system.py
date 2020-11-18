@@ -6,7 +6,8 @@
 # 3) display on lcd ->
 # 4) upload identity and temperature to cloud
 #
-# WIP, currently implemented 1-3
+# currently implemented 1-4
+# need to add more checking conditions for robustness
 
 import board
 import busio as io
@@ -14,6 +15,11 @@ import adafruit_mlx90614
 import smbus
 import time
 import cv2
+import requests 
+
+
+# defining the api-endpoint  
+API_ENDPOINT = "http://127.0.0.1:5000/api/users"
 
 # set up camera object
 cap = cv2.VideoCapture(0)
@@ -141,7 +147,6 @@ def main():
                                 0.5, (0, 255, 0), 2)"""
                 if data:
                     qr_done = 1
-                    userdata = data
                     print("data found: ", data, "qr_done: ", qr_done)
                     previousdata = data
                     break
@@ -165,13 +170,27 @@ def main():
                 print(temp_string)
                 time.sleep(3)
 
-            temp_string = str(round(mlx.object_temperature, 2))
+            username = data.split(';')[0]
+            userid = data.split(';')[1]
+            body_temp = round(mlx.object_temperature, 2)
+            temp_string = str(body_temp)
             lcd_string("hi ",                   LCD_LINE_1)
-            lcd_string(userdata,                LCD_LINE_2)
+            lcd_string(username,                LCD_LINE_2)
             lcd_string("Body temperature:",     LCD_LINE_3)
             lcd_string(temp_string + " Celsius",LCD_LINE_4)
             time.sleep(3)
-            
+
+            # data to be sent to api 
+            data = {'username':     username,
+                    'IC':           userid,
+                    'temperature':  body_temp} 
+              
+            # sending post request and saving response as response object 
+            r = requests.post(url = API_ENDPOINT, json = data) 
+              
+            # extracting response text  
+            pastebin_url = r.text 
+            print("The pastebin URL is:%s"%pastebin_url) 
             #clear previous data
             qr_done = 0
             data = ''
