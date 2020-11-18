@@ -62,11 +62,11 @@ This demo uses Python Flask module, coupled with SQLAlchemy and Marshmallow fram
 pre requisite: pip3 install flash-sqlalchemy flash-marshmallow flask-restful requests marshmallow-sqlalchemy  
 Reference: https://towardsdatascience.com/develop-database-driven-rest-api-with-python-in-10-minutes-9b8cbb7ce5b2  
 
-python3 flaskapp.py
+python3 flaskapp.py  
 
 In another terminal, run  
-python3 create_database.py
-python3 post_example.py
+python3 create_database.py  
+python3 post_example.py  
 
 On web browser, run http://127.0.0.1:5000/api/users
 
