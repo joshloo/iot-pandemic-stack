@@ -28,3 +28,7 @@ while True:
 	GPIO.output(pinGreen, 0)
 	GPIO.output(pinBlue, 1)
 	sleep(1)
+	GPIO.output(pinRed, 1)
+	GPIO.output(pinGreen, 1)
+	GPIO.output(pinBlue, 1)
+	sleep(1)
