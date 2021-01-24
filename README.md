@@ -76,3 +76,13 @@ select * from user;
 On web browser, run http://127.0.0.1:5000
 
 ![Example output](https://github.com/joshloo/iot-pandemic-stack/blob/main/web-database/example_snapshot.png)
+
+
+# [Staging] Guides for GPS from Google Geo API  
+go to https://console.cloud.google.com/apis/library?filter=category:maps  
+select Geocoding API  
+Click enable  
+Follow the steps here at https://developers.google.com/maps/documentation/geocoding/get-api-key to get an API key  
+Copy the API key and add it to the HTTP RESTful request
+
+pre-requisite: pip install geolocation-python  
