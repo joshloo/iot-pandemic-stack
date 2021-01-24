@@ -1,0 +1,5 @@
+pip3 install flash-sqlalchemy
+pip3 install flash-marshmallow
+pip3 install flask-restful
+pip3 install requests
+pip3 install marshmallow-sqlalchemy

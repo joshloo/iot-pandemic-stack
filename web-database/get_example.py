@@ -11,10 +11,11 @@ r = requests.get(url = URL)
 data = r.json() 
   
 # extracting username, ID, temperature
-username 	= data['username']
-ID 		= data['ID']
-temperature 	= data['temperature']
+username    = data['username']
+ID      = data['ID']
+temperature     = data['temperature']
+location     = data['location']
   
 # printing the output 
-print("User:%s\nID:%s\nTemperature:%s Celsius"
-      %(username, IC,temperature)) 
+print("User:%s\nID:%s\nTemperature:%s Celsius\nLocation:%s\n"
+      %(username, IC,temperature,location)) 
