@@ -62,6 +62,7 @@ This demo uses Python Flask module, coupled with SQLAlchemy and Marshmallow fram
 
 pre requisite: pip3 install flash-sqlalchemy flash-marshmallow flask-restful requests marshmallow-sqlalchemy  
 Reference: https://towardsdatascience.com/develop-database-driven-rest-api-with-python-in-10-minutes-9b8cbb7ce5b2  
+Reference: https://www.hackster.io/mjrobot/from-data-to-graph-a-web-journey-with-flask-and-sqlite-4dba35  
 
 python3 flask-sql3.py  
 
