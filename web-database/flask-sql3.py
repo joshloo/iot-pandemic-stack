@@ -41,7 +41,7 @@ def getHistData(numSamples):
         timestamp.append(row[0])
         username.append(row[1])
         ic.append(row[2])
-        location.append(float(row[3]))
+        location.append(row[3])
         temperature.append(float(row[4]))
     return timestamp, username, ic, location, temperature
 
@@ -51,9 +51,10 @@ def index():
     ys = temperature
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1)
-    axis.set_title("Temperature [°C]")
+    axis.set_title("Body Temp of " + username[0] + " at GPS location " + location[0])
     axis.set_xlabel("Samples")
-    axis.set_ylim(0,50)
+    axis.set_xlabel("Temperature [°C]")
+    #axis.set_ylim(32,40)
     axis.grid(True)
     xs = range(numSamples)
     
